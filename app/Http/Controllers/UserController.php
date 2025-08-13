@@ -10,12 +10,10 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::all();
-        return response()->json($users);
+        return view('users.index', ['users' => User::all()]);
     }
-
-    public function getUserById(User $user)
+    public function show(User $user)
     {
-        return response()->json($user);
+        return view('users.show', ['user' => $user]);
     }
 }
