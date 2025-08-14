@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Details</title>
-</head>
-
-<body>
-    <h1>User Details</h1>
+@extends('layouts.default')
+@section('title', 'User ' . $user->id . ' Details')
+@section('content')
+    <h1>User {{ $user->id }} Details</h1>
     <p>Name: {{ $user->name }}</p>
     <p>Email: {{ $user->email }}</p>
-</body>
-
-</html>
+@endsection

@@ -1,21 +1,22 @@
 @extends('layouts.default')
 
+@section('title', 'Users List')
 @section('content')
-<h1>Users</h1>
+
 <ul>
     @foreach ($users as $user)
         <li>{{ $user->name }}</li>
     @endforeach
 
     @php
-        $testing_char = 'Hello Worlds';
+        $testing_char = 'Laravel refresh mind';
     @endphp
     @switch($testing_char)
-        @case('Hello World')
+        @case('Laravel refresh mind')
             <p>{{ $testing_char }}</p>
             @break
         @default
             <p>Unknown</p>
     @endswitch
 </ul>
-
+@endsection
