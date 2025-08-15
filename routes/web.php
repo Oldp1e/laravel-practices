@@ -11,6 +11,7 @@ Route::get('/', function () {
 // Users
 Route::get('admin/users', [UserController::class, 'index']);
 Route::get('admin/users/{user}', [UserController::class, 'show']);
+Route::delete('admin/users/{user}', [UserController::class, 'destroy']);
 
 // Posts
 Route::post('admin/posts', [PostController::class, 'store']);
